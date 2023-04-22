@@ -1,0 +1,73 @@
+<meta charset="UTF-8">
+<h1>Calcular IMC</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br><br><br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var pesoMeredith = 56;
+    var alturaMeredith = 1.55;
+    var imcMeredith = pesoMeredith / (alturaMeredith * alturaMeredith);
+    imprimir("El IMC de Meredith es: "+imcMeredith);
+    
+    var pesoBrian= 88;
+    var alturaBrian = 1.75;
+    var imcBrian = pesoBrian / (alturaBrian * alturaBrian);
+    imprimir("El IMC de Brian es: "+imcBrian);
+
+    //optimizando con funciones
+
+    function calculoImc(peso,altura,nombre){
+        imc=peso/(altura*altura);
+        imprimir("El IMC calculado de "+ nombre + " es: " + imc);
+        
+    }
+     
+     //Calculando IMC para Roberto
+    calculoImc(75, 1.71,"Roberto"); 
+    //Calculando el IMC para Samara
+    calculoImc(63, 1.53,"Samara"); 
+
+    //calculando el promedio de dos imc
+
+    function calculoPromImc(peso1,altura1,nombre1,peso2,altura2,nombre2){
+        imc1=peso1/(altura1*altura1);
+        imc2=peso2/(altura2*altura2);
+        imprimir("El promedio de los IMC calculados de "+ nombre1 +" y de " + nombre2 + " es: " + (imc1+imc2)/2);
+    }
+    //Llamando a la funcion calculoPromImc, y mandando valores como parametro de la misma
+    calculoPromImc(45, 1.50,"Melanie",88, 1.73,"Beto"); 
+
+    //Optimizando aún más
+
+    function calculoPromImc2(peso,altura){
+        return(peso/(altura*altura));
+    }
+    //Llamando a la funcion calculoPromImc2, y mandando valores como parametro de la misma
+    imprimir("El promedio de los IMC calculados de Alberto y Juan es: "+ (calculoPromImc2(95, 1.82)+calculoPromImc2(60, 1.56))/2);
+    imprimir("<hr>")
+    //Vamos interactuar con el usuario, haciendo la mismas acciones
+    //Prompt es una funcion de JS que nos permite recibir datos que ingrese el usuario, solicitandolos como mensaje emergente
+    nomUsuario= prompt("Ingrese su nombre")
+    pesoUsuario = prompt(nomUsuario + " Digite su peso");
+    alturaUsuario = prompt(nomUsuario + " Digite su altura");
+    imcUsuario = calculoPromImc2(pesoUsuario,alturaUsuario);
+    imprimir("El IMC del usuario "+ nomUsuario + " es: "+imcUsuario);
+
+    //agregamos condiciones para mostrar mensaje de acuerdo a los valores de IMC
+    if(imcUsuario<18.5){
+        imprimir("Usted esta por debajo del intervalo recomendado");
+    }
+    if(imcUsuario == 18.5 && imcUsuario<=24.9){
+        imprimir("Usted esta dentro del intervalo recomendado");
+    }
+    if(imcUsuario >= 25.5 ){
+        imprimir(nomUsuario +" usted esta por encima del intervalo recomendado");
+    }
+
+</script>

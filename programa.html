@@ -1,0 +1,97 @@
+<meta charset="UTF-8">
+HTML
+La edad de Meredith es...
+<h1> PROGRAMA</h1>
+
+<script>
+    document.write("La edad de Meredith es...<br>")
+    document.write("<br>")
+    document.write("22<br>")
+    document.write("La edad de Meredith calculada es...<br>")
+    document.write("15+7=")
+    document.write(15+7)
+    document.write("<br>15"+"7")
+    document.write("<br>15*7=")
+    document.write(15*7)
+    document.write("<br> La suma de las edades de Meredith, Samara y Brian son: ");
+    document.write(22+23+26)
+    document.write("<br> Meredith nacio en el año: ");
+    document.write(2023-22)
+    //alert("La edad de Meredith es...");
+   // alert("?");
+    document.write("<br>")
+    document.write("<br>")
+    document.write(12 + " años <br>");
+    document.write(10 + 20);
+    document.write("<br>")
+      
+</script>
+
+<script>
+    document.write("<br>")
+    document.write("<br>")
+    document.write("ESTE ES UN NUEVO SCRIPT DE JS...<br>")
+    document.write("<br>")
+    var anio=2023;
+    document.write("Ma de Jesus tiene "+(anio-1979)+" años<br>");
+    document.write("Albertico tiene "+(anio-1971)+" años<br>");
+    anio=2050;
+    document.write("Ahora Ma de Jesus tiene "+(anio-1979)+" años, si el año es " +anio);
+    document.write("<br>")
+    document.write("Ahora Albertico "+(anio-1971)+" años, si el año es " +anio);
+    document.write("<br>")
+    //definismo es inicializamos variables tipo entero y string
+    var eMere=22;
+    var eMaJesus=44;
+    var eAlbertico=52;
+    var nom1="Meredith";
+    var nom2="Ma de Jesus";
+    var nom3="Albertico";
+    promedio=(eMere+eMaJesus+eAlbertico)/3;
+    document.write("El promedio de las edades de " +nom1+", "+nom2+" y "+nom3+" es: "+Math.round(promedio)+", número redondeado");
+    document.write("<br>")
+    document.write("<br>")
+</script>
+
+<script>
+    
+    document.write("ESTE ES UN NUEVO SCRIPT DE JS...<br>")
+    //funcion que imprime saltos de linea
+    function saltarlinea(){
+      document.write("<br>");
+    }
+    //funcion que imprime textos recibidos como parametro
+    function imprimir(frase){
+        document.write(frase);
+        //mandamos a llamar a la funcion saltar linea, una funcion dentro de otra funcion
+        saltarlinea();
+    }
+    //mandamos llamar la funcion imprimir le mandamos textos como parametro
+    imprimir("Esta es una nueva linea")
+    imprimir("Esta es una segunda linea")
+    imprimir("Esta es una tercera linea")  
+    imprimir("Mi nombre es Meredith, texto de la funcion imprimir");
+    saltarlinea();
+    saltarlinea();
+</script>
+
+
+<script>
+    
+    document.write("DIFERENCIA DE EDADES<br>")
+    //funcion que imprime saltos de linea
+    function saltarlinea(){
+      document.write("<br>");
+    }
+    //funcion que imprime textos recibidos como parametro
+    function imprimir(frase){
+        document.write(frase);
+        //mandamos a llamar a la funcion saltar linea, una funcion dentro de otra funcion
+        saltarlinea();
+    }
+    //mandamos llamar la funcion imprimir le mandamos textos como parametro
+    var miEdad = 22;
+    var herEdad = 26;
+    var difEdad = herEdad-miEdad;
+    imprimir("La diferencia de edad entre mi hermano y yo es: "+ difEdad);
+</script>
